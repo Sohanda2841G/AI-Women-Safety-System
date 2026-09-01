@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ai Women Safety System</string>
+    <string name="title_activity_main">Ai Women Safety System</string>
+    <string name="package_name">com.safesos.app</string>
+    <string name="custom_url_scheme">com.safesos.app</string>
+</resources>

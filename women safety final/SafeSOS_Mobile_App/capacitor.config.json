@@ -1,8 +1,0 @@
-{
-  "appId": "com.safesos.app",
-  "appName": "SafeSOS",
-  "webDir": "www",
-  "server": {
-    "androidScheme": "https"
-  }
-}

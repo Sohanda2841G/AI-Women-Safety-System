@@ -1,0 +1,1060 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #182033;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TOP HEADER
+========================================= */
+
+.top {
+    height: 70px;
+
+    width: 100%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e9ef;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e53935;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.top-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    position: relative;
+}
+
+.account {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #182033;
+
+    color: white;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DESKTOP SIDEBAR
+========================================= */
+
+.layout {
+    display: flex;
+
+    min-height: calc(100vh - 70px);
+}
+
+.side {
+    width: 230px;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border-right: 1px solid #e5e9ef;
+
+    padding: 18px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.nav {
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 14px;
+
+    margin: 4px 0;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    color: #637083;
+
+    transition: 0.15s;
+}
+
+.nav:hover,
+.nav.active {
+    background: #f0f3f7;
+
+    color: #182033;
+
+    font-weight: bold;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    flex: 1;
+
+    padding: 30px;
+
+    max-width: 1250px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 22px;
+}
+
+.head h1 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+.muted {
+    color: #6c7788;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.card {
+    background: white;
+
+    border: 1px solid #e6eaf0;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.span2 {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.status:last-child {
+    border-bottom: none;
+}
+
+.green {
+    color: #17834f;
+}
+
+.danger-text {
+    color: #d72e2e;
+}
+
+.safe {
+    background: #e9f8f0;
+
+    color: #17834f;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SOS
+========================================= */
+
+.sos-wrap {
+    text-align: center;
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.sos {
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    border: 20px solid #ffe0e0;
+
+    background: #e53935;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 15px 40px rgba(229, 57, 53, 0.3);
+
+    user-select: none;
+
+    transition: 0.15s;
+}
+
+.sos:hover {
+    box-shadow:
+        0 18px 45px rgba(229, 57, 53, 0.4);
+}
+
+.sos:active {
+    transform: scale(0.97);
+}
+
+.sos.pressing {
+    transform: scale(0.94);
+
+    box-shadow:
+        0 0 0 12px rgba(229, 57, 53, 0.15),
+        0 15px 40px rgba(229, 57, 53, 0.35);
+}
+
+.sos .icon {
+    font-size: 55px;
+}
+
+.sos b {
+    font-size: 32px;
+}
+
+.sos small {
+    margin-top: 6px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   QUICK BUTTONS
+========================================= */
+
+.quick {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.secondary {
+    border: 1px solid #dce2e9;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 11px 15px;
+}
+
+.secondary:hover {
+    background: #f0f3f7;
+}
+
+
+/* =========================================
+   EMERGENCY
+========================================= */
+
+.emergency {
+    border: 2px solid #e53935;
+
+    background: #fff7f7;
+}
+
+.emergency h2 {
+    color: #d72e2e;
+}
+
+.high-risk {
+    background: #ffe8e8;
+
+    color: #d72e2e;
+}
+
+.checks {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin: 18px 0;
+}
+
+.check {
+    background: white;
+
+    border: 1px solid #eee;
+
+    border-radius: 11px;
+
+    padding: 15px;
+}
+
+.danger {
+    border: 0;
+
+    background: #e53935;
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 13px 18px;
+
+    font-weight: bold;
+}
+
+.danger:hover {
+    background: #c92f2f;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.map {
+    height: 290px;
+
+    border-radius: 14px;
+
+    background: #dfeae3;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.map::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -50px;
+
+    background:
+        repeating-linear-gradient(
+            35deg,
+            transparent 0 35px,
+            rgba(255, 255, 255, 0.5)
+            36px 38px
+        );
+
+    transform: rotate(-4deg);
+}
+
+.pin {
+    position: absolute;
+
+    left: 50%;
+
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 45px;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   CASES
+========================================= */
+
+.case {
+    border: 1px solid #e1e6ed;
+
+    border-radius: 15px;
+
+    padding: 17px;
+
+    background: white;
+}
+
+.casehead {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.risk {
+    color: #d72e2e;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.actions button {
+    padding: 10px 13px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+}
+
+.accept {
+    background: #182033;
+
+    color: white;
+}
+
+.accept:hover {
+    background: #2b3448;
+}
+
+.respond {
+    background: #e9f8f0;
+
+    color: #17834f;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login {
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef3fa,
+            white
+        );
+}
+
+.loginbox {
+    width: min(470px, 100%);
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.loginlogo {
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+.loginlogo span {
+    color: #e53935;
+}
+
+.roles {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin: 24px 0;
+}
+
+.role {
+    padding: 20px;
+
+    border: 1px solid #dce2ea;
+
+    background: white;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.role:hover {
+    background: #f8f9fb;
+}
+
+.role.selected {
+    border: 2px solid #e53935;
+
+    background: #fff7f7;
+}
+
+.role b {
+    display: block;
+
+    margin-top: 8px;
+}
+
+.continue {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: #182033;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.continue:hover {
+    background: #2b3448;
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    background: #182033;
+
+    color: white;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    z-index: 2000;
+}
+
+
+/* =========================================
+   THREE DOT MENU
+========================================= */
+
+.menu-button {
+    width: 42px;
+
+    height: 42px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #182033;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+}
+
+.menu-button:hover {
+    background: #f0f3f7;
+}
+
+.mobile-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 52px;
+
+    right: 0;
+
+    width: 200px;
+
+    background: white;
+
+    border: 1px solid #e5e9ef;
+
+    border-radius: 14px;
+
+    padding: 8px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+}
+
+.mobile-menu.show {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.mobile-menu button {
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 13px 14px;
+
+    border-radius: 9px;
+
+    color: #182033;
+
+    font-size: 15px;
+}
+
+.mobile-menu button:hover {
+    background: #f0f3f7;
+}
+
+
+/* =========================================
+   DESKTOP MENU
+========================================= */
+
+@media (min-width: 851px) {
+
+    .menu-button {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .main {
+        padding: 22px;
+    }
+
+    .grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .span2 {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PORTRAIT
+========================================= */
+
+@media (max-width: 850px) {
+
+    html,
+    body {
+        width: 100%;
+
+        min-height: 100%;
+
+        overflow-x: hidden;
+    }
+
+    body {
+        background: #f4f7fb;
+    }
+
+
+    /* HEADER */
+
+    .top {
+        height: 64px;
+
+        padding: 0 15px;
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    /* HIDE USER TEXT */
+
+    .account {
+        font-size: 0;
+    }
+
+    .avatar {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+
+    /* HIDE DESKTOP SIDEBAR */
+
+    .side {
+        display: none !important;
+    }
+
+
+    /* MAIN */
+
+    .layout {
+        display: block;
+
+        width: 100%;
+
+        min-height:
+            calc(100vh - 64px);
+    }
+
+    .main {
+        width: 100%;
+
+        max-width: none;
+
+        padding: 18px 15px 30px;
+    }
+
+
+    /* HEADER */
+
+    .head {
+        margin-bottom: 18px;
+    }
+
+    .head h1 {
+        font-size: 23px;
+
+        line-height: 1.2;
+    }
+
+
+    /* GRID */
+
+    .grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .span2 {
+        grid-column: auto;
+    }
+
+
+    /* CARDS */
+
+    .card {
+        width: 100%;
+
+        padding: 17px;
+
+        border-radius: 16px;
+    }
+
+
+    /* STATUS */
+
+    .status {
+        font-size: 14px;
+
+        padding: 11px 0;
+    }
+
+
+    /* SOS */
+
+    .sos-wrap {
+        min-height: 390px;
+
+        padding: 20px 10px;
+    }
+
+    .sos {
+        width: 210px;
+
+        height: 210px;
+
+        border-width: 17px;
+    }
+
+    .sos .icon {
+        font-size: 42px;
+    }
+
+    .sos b {
+        font-size: 27px;
+    }
+
+    .sos small {
+        font-size: 10px;
+    }
+
+
+    /* QUICK BUTTONS */
+
+    .quick {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin-top: 18px;
+    }
+
+    .secondary {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+
+    /* CHECKS */
+
+    .checks {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+
+    /* MAP */
+
+    .map {
+        height: 230px;
+    }
+
+
+    /* CASE ACTIONS */
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+
+
+    /* LOGIN */
+
+    .login {
+        padding: 15px;
+    }
+
+    .loginbox {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    .loginlogo {
+        font-size: 28px;
+    }
+
+    .roles {
+        grid-template-columns: 1fr;
+    }
+
+    .role {
+        padding: 16px;
+    }
+
+    .toast {
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 20px;
+
+        text-align: center;
+    }
+
+}

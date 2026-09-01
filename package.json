@@ -1,0 +1,19 @@
+{
+  "name": "safesos-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SafeSOS Women Safety Mobile Application",
+  "scripts": {
+    "sync": "npx cap sync",
+    "android": "npx cap open android",
+    "copy": "npx cap copy",
+    "build": "npm run sync"
+  },
+  "dependencies": {
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/android": "^8.5.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.1"
+  }
+}
